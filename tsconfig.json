@@ -1,10 +1,27 @@
 {
-    "compilerOptions": {
-        "jsx" : "react", //리액트 사용 
-        "outDir": "dist", //아웃 디렉토리(파일 저장할 폴더)
-        "target":"ES6", //컴파일 할 버전 
-        "module": "CommonJS", //일반적인 node 자바스크립트 
-        "lib":["ES6" ], //라이브러리 
-        "sourceMap": true
-    } 
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }
