@@ -19,7 +19,7 @@ export type Restaurant = {
 export type Address = {
     city:string;
     detail:string;
-    zipCode:Number;
+    zipCode?:number;
 }
 
 export type Menu={
@@ -27,3 +27,15 @@ export type Menu={
     price:number;
     category:string;
 }
+
+export type AddressWithoutZip = Omit< Address, 'zipCode'>
+export type RestaruantOnlCategory = Pick<Restaurant,'category'>
+
+export type ApiResponse<T> = {
+    data:T[],
+    totalPage:number,
+    page:number
+}
+
+export type RestaurantResponse = ApiResponse<Restaurant>
+export type MenuResponse = ApiResponse<Menu>
